@@ -1,38 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/script.js" async defer></script>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/input-slider.css" />
+    <title>Etch a sketch</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="js/script.js" async defer></script>
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/input-slider.css">
-  <title>Etch a sketch</title>
-</head>
-
-<body style="background-color: #272727;">
-  <h2 style="color: azure;">Etch a sketch</h2>
-  <div class="">
+  <body style="background-color: #272727">
+    <h2 style="color: azure; text-align: center; padding: 1rem">
+      Etch a sketch
+    </h2>
     <div class="container">
-      <div class="container-colorpicker">
-        <input type="color" id="colorpicker" value="#0000ff" />
+      <div class="container-option">
+        <div class="container-colorpicker">
+          <input type="color" id="colorpicker" value="#780780" />
+        </div>
+        <div id="showcolor" style="color: azure; margin-top: 8px"></div>
+        <button onclick="eraser()" class="btn">eraser here</button>
+        <button onclick="clean()" class="btn">clear here</button>
+        <div class="slidecontainer">
+          <div id="demo" style="color: azure"></div>
+          <input
+            type="range"
+            min="1"
+            max="64"
+            value="53"
+            class="slider"
+            id="myRange"
+          />
+        </div>
       </div>
-      <div id="showcolor" style="color: azure;"></div>
-      <button onclick="eraser()" class="btn">
-        eraser here
-      </button>
-      <button onclick="clean()" class="btn">
-        clear here
-      </button>
-      <div class="slidecontainer">
-        <div id="demo" style="color: azure;"></div>
-        <input type="range" min="1" max="100" value="53" class="slider" id="myRange">
-      </div>
+      <div id="grid" class="board"></div>
     </div>
-    <div class="">
-    </div>
-  </div>
-</body>
-
+  </body>
 </html>
