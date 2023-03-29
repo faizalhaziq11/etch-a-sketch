@@ -20,7 +20,7 @@
   gap: 1rem;
   width: 100%;
   margin: auto;
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 
 .container-option {
