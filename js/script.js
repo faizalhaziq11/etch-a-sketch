@@ -21,7 +21,7 @@ slider.oninput = function () {
 };
 
 function eraser() {
-  console.log("delete");
+  setColor(defaultColor);
 }
 
 function clean() {
@@ -30,6 +30,8 @@ function clean() {
   grid.innerHTML = "";
   makeRows(+defaultSize, +defaultSize);
   setColor(defaultColor);
+  showColor.innerHTML = `<span>${defaultColor}</span>`;
+
   output.innerHTML = `<span>${defaultSize} x ${defaultSize}</span>`;
 }
 
