@@ -60,5 +60,3 @@ colorPicker.addEventListener("input", () => {
 function setColor(color) {
   return (currentColor = color);
 }
-
-console.log("test");
